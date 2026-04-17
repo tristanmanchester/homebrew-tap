@@ -1,12 +1,12 @@
 class Clipmem < Formula
   desc "macOS clipboard memory backed by SQLite and searchable from OpenClaw"
   homepage "https://github.com/tristanmanchester/clipmem"
-  version "0.2.0"
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tristanmanchester/clipmem/releases/download/v0.2.0/clipmem-aarch64-apple-darwin.tar.xz"
-    sha256 "ffb9a22fba362a22a11bb65cc6abd7ef0acb640213593297c0e52198a0a15511"
-  end
+  url "https://github.com/tristanmanchester/clipmem/releases/download/v0.2.0/clipmem-aarch64-apple-darwin.tar.xz"
+  sha256 "ffb9a22fba362a22a11bb65cc6abd7ef0acb640213593297c0e52198a0a15511"
   license "MIT"
+
+  depends_on arch: :arm64
+  depends_on macos: :monterey
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
@@ -39,5 +39,25 @@ class Clipmem < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  service do
+    run [opt_bin/"clipmem", "watch", "--skip-initial", "--interval-ms", "350"]
+    keep_alive true
+    log_path var/"log/clipmem.log"
+    error_log_path var/"log/clipmem.error.log"
+  end
+
+  def caveats
+    <<~EOS
+      Start background capture:
+        brew services start clipmem
+      Or use the cross-install onboarding flow:
+        clipmem setup
+
+      Check health:
+        clipmem doctor
+        clipmem service status
+    EOS
   end
 end
