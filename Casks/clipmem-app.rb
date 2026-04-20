@@ -2,7 +2,7 @@ cask "clipmem-app" do
   version "0.2.11"
   sha256 "4cca674f09fc3deccdedccaf91cc2e4df716ace5204b21cef451c57d998b7a08"
 
-  url "https://github.com/tristanmanchester/clipmem/releases/download/v0.2.11/clipmem-app-aarch64-apple-darwin.zip"
+  url "https://github.com/tristanmanchester/clipmem/releases/download/v#{version}/clipmem-app-aarch64-apple-darwin.zip"
   name "Clipmem"
   desc "Menu bar app for local clipboard history"
   homepage "https://github.com/tristanmanchester/clipmem"
