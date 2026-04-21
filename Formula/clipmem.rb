@@ -1,8 +1,8 @@
 class Clipmem < Formula
   desc "macOS clipboard memory backed by SQLite and searchable from OpenClaw"
   homepage "https://github.com/tristanmanchester/clipmem"
-  url "https://github.com/tristanmanchester/clipmem/releases/download/v0.3.2/clipmem-aarch64-apple-darwin.tar.xz"
-  sha256 "5e708422d9e96eaae4dfd76c0908a6122436f854cc6be4224105bd517cc13003"
+  url "https://github.com/tristanmanchester/clipmem/releases/download/v0.3.3/clipmem-aarch64-apple-darwin.tar.xz"
+  sha256 "a99d8431d0a65189c76dff57e7a899d703cbf2c7d03980bf9ebdd26c5927ba44"
   license "MIT"
 
   BINARY_ALIASES = {
