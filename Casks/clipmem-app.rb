@@ -1,6 +1,6 @@
 cask "clipmem-app" do
-  version "0.5.0"
-  sha256 "ff7ed911212d80cfbad0ab44a070bc256a269732b04f909bf8200d282f88b11e"
+  version "0.5.1"
+  sha256 "397586072a11bae5b554d973eb58414393fca50f0ab8e7e3dc844026d52a9ede"
 
   url "https://github.com/tristanmanchester/clipmem/releases/download/v#{version}/clipmem-app-aarch64-apple-darwin.zip"
   name "Clipmem"
