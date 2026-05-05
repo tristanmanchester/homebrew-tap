@@ -1,8 +1,8 @@
 class Sifs < Formula
-  desc "SIFS Is Fast Search: instant local code search for agents"
+  desc "Instant local code search for agents"
   homepage "https://github.com/tristanmanchester/sifs"
-  url "https://github.com/tristanmanchester/sifs/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "796adf12c0c187f26627acc153a4238ccb10146768131aff6c1b97c3dd034b9c"
+  url "https://github.com/tristanmanchester/sifs/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "c982eca9c66677604ea61769dd5effb6c78bd6e69a8c1bf9d3b215a6380f2eab"
   license "MIT"
   head "https://github.com/tristanmanchester/sifs.git", branch: "main"
 
@@ -22,7 +22,7 @@ class Sifs < Formula
 
     system "git", "-C", repo, "init", "--quiet"
 
-    output = shell_output("#{bin}/sifs search authenticate_token #{repo} --mode bm25 --offline --no-cache")
+    output = shell_output("#{bin}/sifs search authenticate_token --source #{repo} --mode bm25 --offline --no-cache")
     assert_match "auth.py", output
     assert_match "authenticate_token", output
   end
