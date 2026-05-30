@@ -1,6 +1,6 @@
 cask "clipmem-app" do
-  version "0.5.1"
-  sha256 "397586072a11bae5b554d973eb58414393fca50f0ab8e7e3dc844026d52a9ede"
+  version "0.5.2"
+  sha256 "d201f0b323428b065d8f7082388e2fc07f06de397640ddc74b2b43e1251ff032"
 
   url "https://github.com/tristanmanchester/clipmem/releases/download/v#{version}/clipmem-app-aarch64-apple-darwin.zip"
   name "Clipmem"
@@ -9,7 +9,7 @@ cask "clipmem-app" do
 
   depends_on formula: "clipmem"
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "ClipmemMenuBar.app"
 
