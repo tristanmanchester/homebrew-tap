@@ -1,0 +1,31 @@
+name: Rheo cask
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - Casks/rheo.rb
+      - .github/workflows/rheo.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15-intel, macos-26]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: brew audit --cask --online tristanmanchester/tap/rheo
+      - run: brew install --cask tristanmanchester/tap/rheo
+      - name: Verify installed app and CLI
+        run: |
+          rheo --version
+          codesign --verify --deep --strict /Applications/Rheo.app
+          spctl --assess --type execute --verbose=2 /Applications/Rheo.app
