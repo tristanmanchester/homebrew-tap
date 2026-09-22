@@ -1,6 +1,6 @@
 cask "rheo" do
-  version "0.2.2"
-  sha256 "4fe8ffc4666b8f21ee86b5defcd93a4977ab5c29cab39f6e263a71fb32c3ba8c"
+  version "0.2.3"
+  sha256 "9cb79068c61abed1e3a6407d994f71387384bccaa21079f5d96ade1508367625"
 
   url "https://github.com/tristanmanchester/rheo/releases/download/v#{version}/Rheo-#{version}-universal.zip"
   name "Rheo"
