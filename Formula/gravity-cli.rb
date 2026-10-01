@@ -4,11 +4,11 @@ class GravityCli < Formula
   version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tristanmanchester/gravity-monorepo/releases/download/gravity-cli-v0.1.0/gravity-cli-aarch64-apple-darwin.tar.xz"
+      url "https://github.com/tristanmanchester/homebrew-tap/releases/download/gravity-cli-v0.1.0/gravity-cli-aarch64-apple-darwin.tar.xz"
       sha256 "87fead4ab5f19aa416f467ce08d395106a61f18e533e89db602c2d342ce79877"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tristanmanchester/gravity-monorepo/releases/download/gravity-cli-v0.1.0/gravity-cli-x86_64-apple-darwin.tar.xz"
+      url "https://github.com/tristanmanchester/homebrew-tap/releases/download/gravity-cli-v0.1.0/gravity-cli-x86_64-apple-darwin.tar.xz"
       sha256 "f2628669299c9dcefefd21c567cec0ed22f3f5d1f241626f2e01927992ab6b68"
     end
   end
