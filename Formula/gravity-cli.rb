@@ -1,15 +1,15 @@
 class GravityCli < Formula
   desc "Command-line access to Gravity notes for AI agents and scripts."
   homepage "https://gravitynotes.app"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tristanmanchester/homebrew-tap/releases/download/gravity-cli-v0.2.0/gravity-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "439b560cc707cf8f86bdf08ff725a9de76199ae97fee5ea636dc9516738db9da"
+      url "https://github.com/tristanmanchester/homebrew-tap/releases/download/gravity-cli-v0.3.0/gravity-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "fc63c742ef6fa951b9ec3d1f18d43e24fdef69b60ead00d3c1d0566eaa1baf50"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tristanmanchester/homebrew-tap/releases/download/gravity-cli-v0.2.0/gravity-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "3d66153f27e7885b77789ddad9b0e96873479595cd28be63277b59e7daf32af5"
+      url "https://github.com/tristanmanchester/homebrew-tap/releases/download/gravity-cli-v0.3.0/gravity-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "08dc780d50846e9624d6b9bcc64fa9770a82c7194cfc7fb33942d7fb8c5fae34"
     end
   end
   license "UNLICENSED"
